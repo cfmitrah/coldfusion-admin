@@ -1,0 +1,15 @@
+/**
+ *
+ * @depends /plugins/date-timepicker/date-timepicker.css
+ */
+#custom_field_listing_wrapper .row,
+#standard_field_listing_wrapper .row,
+#dependencies_field_listing_wrapper .row,
+#login_field_listing_wrapper .row, 
+#hotel_field_listing_wrapper .row {
+	display: none;
+}
+
+#form-options-inputs-wrap .col-md-6 {
+	margin-bottom: 10px;
+}

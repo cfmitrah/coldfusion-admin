@@ -1,0 +1,241 @@
+#
+# The default Uni-Form form schema for Dformd.
+# "# END"= end of element
+# Available syntax 
+#
+# Define an element
+# element.example_element_name=
+#   code_block
+# # END element.example_element_name
+#
+# Define an resource
+# resource.example_resource_name=
+#   resource_block
+# # END resource.example_resource_name
+#
+# when using a condition the renderer will look for the variable in the context
+# a condition variable must be a boolean.
+# {{#condition}} code_block {{/condition}}
+#
+# array loops
+# you can pass in an array in a variable and loop over it like so
+# {{%array}} repeat_code_block {{/array}}
+#
+# reserved var names [ element_Dformd_element, element_Dformd_children ]
+# $${element_Dformd_element} can only be used when there is a wrapper for your elements
+# $${element_Dformd_children} can only be used when an element has elements
+#
+# Placeholders $${variable_name} will be replaced by variables in the context
+# 
+# 
+#placeholder="$${placeholder}"
+
+element.text=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="text" data-field_id="$${field_id}" class="$${class} form-control"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.text
+
+element.image=
+<input name="$${field_name}" id="$${id}" type="file" data-field_id="$${field_id}" class="$${class}"{{#is_required}} required{{/is_required}} style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+{{#has_image}}
+<img src="$${image_url}" class="reg-preview-img" />
+<input type="hidden" name="$${field_name}_current" id="$${id}_current" value="$${value}" type="file" data-field_id="current_$${field_id}" />
+{{/has_image}}
+<div class="help-block">
+    <strong>Please upload a jpg or png that is no larger than 3MB.</strong>
+</div>
+# END element.image
+
+element.email=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="email" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.email
+
+element.tel=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="tel" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.tel
+
+element.date=
+ <div class='input-group dateonly-datetime-wrapper' id="date-picker-wrap-$${id}">
+<input name="$${field_name}" id="$${id}" value="$${value}" type="text" data-date-mindate="$${date_range_start}" data-date-maxdate="$${date_range_end}" data-field_id="$${field_id}" class="$${class} form-control dateonly-datetime"{{#has_format}} data-date-format="$${date_format}" data-date-defaultdate="$${default_date}" {{/has_format}}data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}} />
+	<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+</div>
+# END element.date
+
+element.color=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="color" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.color
+
+element.datetime=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="datetime" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.datetime
+
+element.datetime-local=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="datetime-local" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.datetime-local
+
+element.month=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="month" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.month
+
+element.search=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="search" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.search
+
+element.number=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="number" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.number
+
+element.range=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="range" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.range
+
+element.time=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="text" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.time
+
+element.url=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="url" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.url
+
+element.week=
+<input name="$${field_name}" id="$${id}" value="$${value}" type="week" data-field_id="$${field_id}" class="$${class} form-control" data-parsley-trigger="change"{{#is_required}} required{{/is_required}} maxlength="$${maxlength}" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+# END element.week
+
+element.yes_no=
+<label class="radio">
+  <label>
+    <input type="radio" name="$${field_name}" id="$${id}-yes" data-field_id="$${field_id}" value="1"{{#is_required}} required{{/is_required}}{{#yes_is_selected}} checked{{/yes_is_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;Yes
+  </label>
+</label>
+<label class="radio">
+  <label>
+    <input type="radio" name="$${field_name}" id="$${id}-no" data-field_id="$${field_id}" value="0"{{#is_required}} required{{/is_required}}{{#no_is_selected}} checked{{/no_is_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;No
+  </label>
+</label>
+# END element.yes_no
+
+element.section_header=
+<div class="form-group col-md-12">
+	<h3>$${label}</h3>
+</div>
+# END element.section_header
+
+element.narrative=
+<input id="$${id}" type="hidden" data-field_id="$${field_id}" $${data_attrs}/>
+# END element.narrative
+
+
+element.display=
+<p class="form-control-static">$${value}</p>
+# END element.display
+
+element.radio=
+{{%field_choices}}
+<label class="radio">
+  <label>
+    <input type="radio" name="$${field_name}" id="$${id}" data-field_id="$${field_id}" value="$${value}"{{#is_required}} required{{/is_required}}{{#is_selected}} checked{{/is_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;$${choice}
+  </label>
+</label>
+{{/field_choices}}
+# END element.radio
+
+element.checkbox=
+{{%field_choices}}
+<label class="checkbox">
+  <label>
+    <input type="checkbox" name="$${field_name}" id="$${id}" data-field_id="$${field_id}" value="$${value}"{{#is_required}} required{{/is_required}}{{#is_selected}} checked{{/is_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;$${choice}
+  </label>
+</label>
+{{/field_choices}}
+{{#has_other_input}}
+<label class="checkbox">
+  <label>
+    <input type="checkbox" name="$${field_name}" id="$${id}" data-field_id="$${field_id}" value="Other"{{#is_required}} required{{/is_required}}{{#other_selected}} checked{{/other_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;Other
+  </label>
+</label>
+<input name="$${field_name}" id="$${id}_other" value="$${other_value}" type="text" data-field_id="$${field_id}" class="$${class} form-control" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+{{/has_other_input}}
+# END element.checkbox
+
+element.select=
+<select name="$${field_name}" id="$${id}" class="form-control $${class}" data-field_id="$${field_id}" style="$${style}"{{#hasmultiple}} multiple{{/hasmultiple}} $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}>
+<option value="">Select an Option</option>
+$${options}
+$${element_Dformd_children}
+{{%field_choices}}
+  <option value="$${value}"$${data_attrs}{{#is_selected}} selected{{/is_selected}}>$${choice}</option>
+{{/field_choices}}
+</select>
+{{#has_other_input}}
+<label class="checkbox">
+  <label>
+    <input type="checkbox" name="$${field_name}" id="$${id}" data-field_id="$${field_id}" value="Other"{{#is_required}} required{{/is_required}}{{#other_selected}} checked{{/other_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;Other
+  </label>
+</label>
+<input name="$${field_name}" id="$${id}_other" value="$${other_value}" type="text" data-field_id="$${field_id}" class="$${class} form-control" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+{{/has_other_input}}
+
+# END element.select
+
+element.multiple_select=
+<select name="$${field_name}" id="$${id}" class="form-control $${class}" data-field_id="$${field_id}" style="$${style}" multiple $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}>
+$${options}
+$${element_Dformd_children}
+{{%field_choices}}
+  <option value="$${value}"$${data_attrs}{{#is_selected}} selected{{/is_selected}}>$${choice}</option>
+{{/field_choices}}
+</select>
+{{#has_other_input}}
+<label class="checkbox">
+  <label>
+    <input type="checkbox" name="$${field_name}" id="$${id}" data-field_id="$${field_id}" value="Other"{{#is_required}} required{{/is_required}}{{#other_selected}} checked{{/other_selected}}{{#isDisabled}} disabled{{/isDisabled}} $${data_attrs}>&nbsp;Other
+  </label>
+</label>
+<input name="$${field_name}" id="$${id}_other" value="$${other_value}" type="text" data-field_id="$${field_id}" class="$${class} form-control" style="$${style}" $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}/>
+{{/has_other_input}}
+
+# END element.multiple_select
+
+element.option_group=
+<optgroup label="$${group_label}" $${data_attrs}>$${element_Dformd_children}</optgroup>
+# END element.option_group
+
+element.option=
+<option value="$${value}"{{#is_selected}} selected{{/is_selected}}$${data_attrs}>$${display}</option>
+# END element.option
+
+element.textarea=
+<textarea name="$${field_name}" id="$${id}" rows="$${rows}" data-field_id="$${field_id}" cols="$${cols}" class="$${class} form-control{{#is_required}} required{{/is_required}}" style="$${style}" 
+ $${data_attrs}{{#isDisabled}} disabled{{/isDisabled}}>$${value}</textarea>
+# END element.textarea
+
+
+element.two_col_wrapper=
+<div class="form-group form-group-sm col-sm-6">
+	{{#has_narrative}}
+		<div class="bs-callout bs-callout-info">$${narrative}</div>
+	{{/has_narrative}}
+	
+	{{#not_has_narrative}}
+	    <label for="$${id}" class="{{#is_required}} required{{/is_required}}">$${label}</label>
+	{{/not_has_narrative}}
+	    $${element_Dformd_element}
+    
+</div>
+# END element.two_col_wrapper
+element.one_col_wrapper=
+<div class="form-horizontal">
+<div class="form-group form-group-sm col-sm-12">
+	{{#has_narrative}}<div class="bs-callout bs-callout-info">$${narrative}</div>{{/has_narrative}}
+	{{#not_has_narrative}}
+	    <label for="$${id}" class="{{#is_required}} required{{/is_required}} control-label col-sm-5">$${label}</label>
+	    <div class="col-sm-7">
+	{{/not_has_narrative}}
+	
+	    $${element_Dformd_element}
+	{{#not_has_narrative}}
+	    {{#has_placeholder}}<span class="help-block">$${placeholder}</span>{{/has_placeholder}}
+	    </div>
+    {{/not_has_narrative}}
+</div>
+</div>
+# END element.one_col_wrapper

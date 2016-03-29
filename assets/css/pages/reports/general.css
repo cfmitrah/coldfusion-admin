@@ -1,0 +1,4 @@
+table.dataTable thead .sorting{
+	background: none;
+	cursor: default;
+}

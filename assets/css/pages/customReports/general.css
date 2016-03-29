@@ -1,0 +1,7 @@
+span.parsley-required{
+	color: red;
+	display: block;
+	margin: 0px 0px 0 15px;
+	padding-top: 15px;
+	height: 10px;
+}

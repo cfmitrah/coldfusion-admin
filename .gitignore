@@ -1,0 +1,5 @@
+/assets/media/*
+/assets/compiled/*
+.DS_Store
+/.project
+app/config/local.json

@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Joe Schwinger -- Project Lead -- @meetingplay
+    Lisa Vann -- Project Manager -- @lisavann
+    Aaron Benton -- Senior Architect -- @bentonam
+    Matt Graff -- Lead Developer -- @spiraldev
+    Joshua Gonzalez -- Developer -- @jtmgsays
+    Spencer Bailey -- Designer --
+    Carl Williams -- DBA -- @williamscarl
+
+# THANKS
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, ColdFusion
+    Normalize.css, jQuery, Modernizr
+

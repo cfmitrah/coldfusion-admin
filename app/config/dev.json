@@ -1,0 +1,112 @@
+{
+ 	"framework": {
+		"applicationKey": "meetingplay",
+		"usingSubsystems": false,
+		"defaultSection": "event",
+		"defaultItem": "default",
+		"generateSES": true,
+		"SESOmitIndex": true,
+		"reloadApplicationOnEveryRequest": false,
+		"error": "main.detailederror",
+		"trace": true,
+		"routes": [
+		  { "/event/attendee/settings": "/attendeeSettings" }
+		  ,{ "/event/sessions": "/sessions" }
+		  ,{ "/event/sessions/create": "/sessions/create" }
+		]
+	},
+	"ormsettings": {
+		"cfclocation": ["/app/model/entity"],
+		"flushAtRequestEnd": false,
+		"eventhandling": true,
+		"automanageSession": true,
+		"savemapping": false,
+		"skipCFCwitherror": false,
+		"useDBforMapping": true,
+		"autogenmap": true,
+		"logsql": false,
+		"dbcreate": "update"
+	},
+	"seo": {
+		"siteVerification": "",
+		"analyticsID": ""
+	},
+	"env": "dev",
+	"error": {
+		"email": true,
+		"log": false,
+		"database": false,
+		"logFile": "dev-manage-mpreg.log",
+		"from": "errors@meetingplay.com",
+		"to": "aaron@excelaweb.com,matt.g@excelaweb.com,joshua.g@excelaweb.com",
+		"subject": "Error - Manage MP Registrations - [date]"
+	},
+	"security": {
+		"algorithm": "SHA-512",
+		"rehash": 1024,
+		"saltSize": 16
+	},
+	"mail": {
+		"dev_emails": "lisa.vann@excelaweb.com,joshua.g@excelaweb.com,jgonzalez@jtmgdevelopment.com",
+		"from": "noreply@meetingplay.com",
+		"contact": "contact@meetingplay.com"
+	},
+	"site": {
+		"title": "(DEV) MeetingPlay Registrations",
+		"author": "eXcelaweb.com",
+		"email": "aaron@excelaweb.com",
+		"noreply": "noreply@meetinplay.com",
+		"cssVersion": "1",
+		"jsVersion": "1",
+		"lang": "en",
+		"country": "us",
+		"locale": "English (US)",
+		"charset": "utf-8"
+	},
+	"paths": {
+		"media": "/assets/media/",
+		"emails": "/app/layouts/emails/",
+		"tmp" : "C:\\tmp",
+		"sql_import_tmp" : "C:\\tmp\\dev\\imports",
+		"cdn_image_upload_dir": "",
+		"cdn_file_upload_dir": "",
+		"ftp":"/dev/imports/"
+	},
+	"mappings": {
+		"cdn": "../../cdn/dev/"
+	},
+	"allowed_mime_types": {
+		"image": "image/jpeg,image/png"
+		,"file": "application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,application/pdf,text/csv"
+	},
+	"user": {
+		"user_id": 0,
+		"avatar": "",
+		"dob": "",
+		"gender": "",
+		"isloggedin": false,
+		"job_title": "",
+		"lastlogin": "",
+		"middle_name": "",
+		"name_on_badge": "0",
+		"firstname": "",
+		"lastname": "",
+		"companies": "",
+		"current_company_id": "",
+		"current_event_id": "",
+		"role": ""
+	},
+	"urls": {
+		"css": "/assets/css/",
+		"img": "/assets/img/",
+		"js": "/assets/js/",
+		"media": "/assets/media/",
+		"wysiwyg_media": "http://devmanage.meetingplay.com/assets/media/",
+		"mp_cdn": "https://devcdn.meetingplay.com/"
+	},
+	"cache": {
+        "region": "DEV-MeetingPlaySystem",
+        "properties": {}
+    },
+	"datasource": "DEV-MeetingPlaySystem"
+}

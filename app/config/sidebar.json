@@ -1,0 +1,271 @@
+{
+    "company": {
+        "sections": [
+            {
+                "label": "OVERVIEW",
+                "class": "glyphicon glyphicon-dashboard color-01",
+                "links": [
+                    {
+                        "link": "company.overview",
+                        "label": "Overview"
+                    }
+                ]
+            },
+            {
+                "label": "Users",
+                "class": "glyphicon glyphicon-user color-02",
+                "links": [
+                    {
+                        "link": "company.adduser",
+                        "label": "Add User"
+                    },
+                    {
+                        "link": "company.removeuser",
+                        "label": "Remove User"
+                    }
+                ]
+            },
+            {
+                "label": "BILLING / Payment",
+                "class": "glyphicon glyphicon-bullhorn color-03",
+                "links": [
+                    {
+                        "link": "company.billing",
+                        "label": "Details"
+                    },
+                    {
+                        "link": "company.billingcontact",
+                        "label": "Billing Contact"
+                    }
+                ]
+            },
+            {
+                "label": "MEDIA",
+                "class": "glyphicon glyphicon-stats color-04",
+                "links": [
+                    {
+                        "link": "company.media",
+                        "label": "Library"
+                    }
+                ]
+            }
+        ]
+    },
+    "agendas" : {
+	    "sections" : [
+            {
+                "label": "OVERVIEW",
+                "class": "glyphicon glyphicon-dashboard color-01",
+                "links": [
+                    {
+                        "link": "agendas.default",
+                        "label": "Schedule"
+                    },
+                    {
+	                    "link": "agendas.create",
+	                    "label": "Create"
+                    },
+                    {
+	                    "link": "agendas.calendar",
+	                    "label": "Calendar"
+                    }
+                ]
+            }	    	
+	    ]
+    },
+    "sessions" : {
+	    "sections" : [
+            {
+                "label": "OVERVIEW",
+                "class": "glyphicon glyphicon-dashboard color-01",
+                "links": [
+                    {
+                        "link": "sessions.default",
+                        "label": "Schedule"
+                    },
+                    {
+	                    "link": "sessions.create",
+	                    "label": "Create"
+                    }
+                ]
+            }	    	
+	    ]
+    },
+    "event": {
+        "sections": [
+            {
+                "label": "OVERVIEW",
+                "class": "glyphicon glyphicon-dashboard color-01",
+                "links": [
+                    {
+                        "link": "event.overview",
+                        "label": "Overview"
+                    }
+                ]
+            },
+            {
+                "label": "CONSTRUCT",
+                "class": "glyphicon glyphicon-wrench color-02",
+                "links": [
+                    {
+                        "link": "event.details",
+                        "label": "Event Details"
+                    },
+                    {
+                        "link": "event/attendee/settings",
+                        "label": "Attendee Settings"
+                    },
+                    {
+                        "link": "registration.settings",
+                        "label": "Registration Settings"
+                    },
+                    {
+                        "link": "registration.forms",
+                        "label": "Registration Forms"
+                    },
+                    {
+                        "link": "agendas.default",
+                        "label": "Agenda"
+                    },
+                    {
+                        "link": "speakers.default",
+                        "label": "Speakers"
+                    },
+                    {
+                        "link": "event.layouttheme",
+                        "label": "Layout / Theme Selection"
+                    },
+                    {
+	                    "link": "sessions.default",
+	                    "label": "Sessions"
+                    }
+                    
+                ]
+            },
+            {
+                "label": "MARKET",
+                "class": "glyphicon glyphicon-bullhorn color-03",
+                "links": [
+                    {
+                        "link": "event.overview",
+                        "label": "Social Media Setup"
+                    },
+                    {
+                        "link": "event.overview",
+                        "label": "Email Setup"
+                    },
+                    {
+                        "link": "event.overview",
+                        "label": "Registration Site Content"
+                    }
+                ]
+            },
+            {
+                "label": "EVALUATE",
+                "class": "glyphicon glyphicon-stats color-04",
+                "links": [
+                    {
+                        "link": "event.overview",
+                        "label": "Standard Reporting"
+                    },
+                    {
+                        "link": "event.overview",
+                        "label": "Custom Reporting"
+                    }
+                ]
+            },
+            {
+                "label": "WE MADE IT",
+                "class": "glyphicon glyphicon-ok color-05",
+                "links": [
+                    {
+                        "link": "event.printbadges",
+                        "label": "Print Name Badges"
+                    },
+                    {
+                        "link": "event.checkin",
+                        "label": "Session Check In's"
+                    }
+                ]
+            }
+        ]
+    },
+    "configuration": {
+        "sections": [
+            {
+                "label": "OVERVIEW",
+                "class": "glyphicon glyphicon-dashboard color-01",
+                "links": [
+                    {
+                        "link": "Configuration.default",
+                        "label": "Overview"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "Manage URL's"
+                    }
+                ]
+            },
+            {
+                "label": "3RD PARTY INTG.",
+                "class": "glyphicon glyphicon-cloud color-02",
+                "links": [
+                    {
+                        "link": "Configuration.default",
+                        "label": "Zurora"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "SSO"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "SalesForce"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "Payment Gateways"
+                    }
+                ]
+            },
+            {
+                "label": "LAYOUT TEMPLATES",
+                "class": "glyphicon glyphicon-th color-03",
+                "links": [
+                    {
+                        "link": "Configuration.default",
+                        "label": "Registration Website"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "Registration Emails"
+                    }
+                ]
+            },
+            {
+                "label": "THEME TEMPLATES",
+                "class": "glyphicon glyphicon-tint color-04",
+                "links": [
+                    {
+                        "link": "Configuration.default",
+                        "label": "Assets"
+                    },
+                    {
+                        "link": "Configuration.default",
+                        "label": "Colors"
+                    }
+                ]
+            },
+            {
+                "label": "SETTING TEMPLATES",
+                "class": "glyphicon glyphicon-wrench color-05",
+                "links": [
+                    {
+                        "link": "Configuration.default",
+                        "label": "Registration"
+                    }
+                ]
+            }
+        ]
+    }
+}

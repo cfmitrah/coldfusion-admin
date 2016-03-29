@@ -1,0 +1,53 @@
+ol.list, ol{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.list li ol{
+	margin: 0 0 0 20px;
+}
+.list div{
+	background: #264b71;
+	
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin: 2px 0;
+	color: #fff;
+	padding: 15px;
+}
+
+ol.list li ol div{
+	background: #487db4;
+}
+.placeholder{
+	outline: 1px dashed #555;
+	visibility: visible;
+}
+.remove, .edit{
+	display: block;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	margin: 0 0 0 5px;
+	background: rgba(0,0,0,.5);
+}
+
+.edit {
+	color: #ffa63d;
+}
+
+.remove {
+	color: #e31414;
+}
+
+ul.std-list {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+ul.std-list li {
+	margin-bottom: 10px;
+}
